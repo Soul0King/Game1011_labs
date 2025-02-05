@@ -1,20 +1,46 @@
-// GAME_1011_LE2.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
-
 #include <iostream>
+#include <string>
+
+
+struct Weapon {
+    float damage = 0.0f;
+    const char* names[3] 
+        = { "Sword", "Gun", "Fists" };
+    const char* specials[3]
+        = { "Thousand Moon Slash", "Dodge this", "Fist of Flowing Water Crushing Rock" };
+};
+
+struct Armour {
+    float armourValue = 0.0f;
+    const char* names[3] 
+        = { "Chain Armour", "Iron Armour", "Leather Armour" };
+    const char* armourDescription[3] 
+        = {"Medium Armour. Good against slashing attacks", "Heavy Armour. Good against blunt attacks as well as slashes", "Light armour. Might soften a blow but good for running"};
+
+};
+
+struct Character {
+    Weapon* weapons = nullptr;
+    Armour* armours = nullptr;
+    float health = 0.0f;
+    std::string name;
+    std::string species;
+    std::string backstory;
+
+};
+
+
+//bool operator==(Armour armourValue, ) {
+//
+//}
+
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    Character* characters = new Character[3];
+
+    
+
+
 }
 
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
